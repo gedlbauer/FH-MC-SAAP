@@ -1,0 +1,8 @@
+@for (post of posts|async; track post.id) {
+<article>
+  <h2>{{post.title}}</h2>
+  <p>{{post.text}}</p>
+</article>
+} @empty {
+  <p>Loading posts...</p>
+}
